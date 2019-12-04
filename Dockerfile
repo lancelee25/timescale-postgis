@@ -48,4 +48,3 @@ RUN set -ex \
     \
     && rm -rf /tmp/postgis-${POSTGIS_VERSION} \
     && apk del .fetch-deps .build-deps
-© 2019 GitHub, Inc.
