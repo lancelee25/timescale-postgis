@@ -18,12 +18,12 @@ RUN set -ex \
                 --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
                 libressl2.7-libcrypto \
                 libcrypto1.1 \
-    && apk add --no-cache --virtual .postgis-deps --repository http://nl.alpinelinux.org/alpine/edge/communtiy \
+    && apk add --no-cache --virtual .postgis-deps --repository http://nl.alpinelinux.org/alpine/edge/community \
         geos \
         gdal \
         proj \
         protobuf-c \
-    && apk add --no-cache --virtual .build-deps --repository http://nl.alpinelinux.org/alpine/edge/communtiy \
+    && apk add --no-cache --virtual .build-deps --repository http://nl.alpinelinux.org/alpine/edge/community \
         postgresql-dev \
         perl \
         file \
