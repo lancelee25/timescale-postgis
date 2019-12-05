@@ -1,6 +1,8 @@
-ARG PG_VERSION_TAG=pg11
-ENV TS_VERSION ${TS_VERSION:-1.5.1}
-FROM timescale/timescaledb:${TS_VERSION}-${PG_VERSION_TAG}
+#ARG PG_VERSION_TAG=pg11
+#ENV TS_VERSION ${TS_VERSION:-1.5.1}
+#FROM timescale/timescaledb:${TS_VERSION}-${PG_VERSION_TAG}
+FROM timescale/timescaledb:1.5.1-pg11
+
 
 MAINTAINER Timescale https://www.timescale.com
 ARG POSTGIS_VERSION
