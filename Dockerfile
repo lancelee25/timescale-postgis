@@ -34,12 +34,12 @@ RUN set -ex \
         protobuf-c-dev \
         json-c-dev \
         gcc g++ \
-        make \
+        make libstdc++ \
     && cd /tmp \
     && wget http://download.osgeo.org/postgis/source/postgis-${POSTGIS_VERSION}.tar.gz -O - | tar -xz \
     && chown root:root -R postgis-${POSTGIS_VERSION} \
     && cd /tmp/postgis-${POSTGIS_VERSION} \
-    && ./configure \
+    && LDFLAGS=-lstdc++ ./configure \
     && echo "PERL = /usr/bin/perl" >> extensions/postgis/Makefile \
     && echo "PERL = /usr/bin/perl" >> extensions/postgis_topology/Makefile \
     && make -s \
