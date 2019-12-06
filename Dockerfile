@@ -39,7 +39,7 @@ RUN set -ex \
         gcc g++ \
         make libstdc++\
     && cd /tmp \
-    && wget https://git.osgeo.org/gitea/postgis/postgis/archive/3.0.0.tar.gz -O -|tar -zx \
+    && wget http://download.osgeo.org/postgis/source/postgis-3.0.0.tar.gz -O -|tar -zx \
     #&& tar -zxvf postgis-${POSTGIS_VERSION}.tar.gz \
     && chown root:root -R postgis-${POSTGIS_VERSION} \
     && cd /tmp/postgis-${POSTGIS_VERSION} \
