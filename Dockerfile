@@ -16,7 +16,7 @@ RUN set -ex \
     # add libcrypto from (edge:main) for gdal-2.3.0
     && apk add --no-cache --virtual .crypto-rundeps \
                 --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
-                libressl2.7-libcrypto \
+                libressl3.0-libcrypto \
                 libcrypto1.1 \
     && apk add --no-cache --virtual .postgis-deps --repository http://nl.alpinelinux.org/alpine/edge/community \
         geos \
